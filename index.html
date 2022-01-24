@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TLI Clone Coding</title>
+
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/swiper.css">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" /> -->
+
+    <!-- CSS -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
+        rel="stylesheet">
+    <!-- 웹 폰트 -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <!-- JS -->
+</head>
+
+<body class="before-load">
+    <div class="loading"></div>
+    <header>
+        <div class="logo">
+            <a href="#">
+                <img src="img/logo.png" alt="logo">
+            </a>
+            <div class="scroll">0</div>
+        </div>
+        <nav class="nav">
+            <div class="top">
+                <a href="#" class="ham">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <p>menu</p>
+                </a>
+            </div>
+            </div>
+            <div class="menu">
+                <ul>
+                    <li><a href="#"><span>제품소개</span><strong>제품소개</strong></a></li>
+                    <li><a href="#"><span>핵심기술</span><strong>핵심기술</strong></a></li>
+                    <li><a href="#"><span>투자정보</span><strong>투자정보</strong></a></li>
+                    <li><a href="#"><span>회사소개</span><strong>회사소개</strong></a></li>
+                    <li><a href="#"><span>인재채용</span><strong>인재채용</strong></a></li>
+                </ul>
+            </div>
+            <div class="bottom">
+                <ul>
+                    <li class="active"><a href="#">KR</a></li>
+                    <li><a href="#">EN</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="sub-iframe">
+            <iframe id="html-iframe" src="http://127.0.0.1:5500/TLi/index.html"></iframe>
+        </div>
+        <div class="sub-menu">
+            <ul>
+                <li>
+                    <p>제품소개</p>
+                    <ul>
+                        <li>
+                            <a href="#"> Micro LED Driver IC</a>
+                        </li>
+                        <li>
+                            <a href="#">Local Dimming</a>
+                        </li>
+                        <li>
+                            <a href="#">T-con</a>
+                        </li>
+                        <li>
+                            <a href="#">Display Driver IC</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <p>핵심기술</p>
+                    <ul>
+                        <li>
+                            <a href="#">R&D</a>
+                        </li>
+                        <li>
+                            <a href="#">특허현황</a>
+                        </li>
+                        <li>
+                            <a href="#">품질현황</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <p>투자정보</p>
+                    <ul>
+                        <li>
+                            <a href="#">뉴스</a>
+                        </li>
+                        <li>
+                            <a href="#">재무정보</a>
+                        </li>
+                        <li>
+                            <a href="#">사업보고서</a>
+                        </li>
+                        <li>
+                            <a href="#">결산공고</a>
+                        </li>
+                        <li>
+                            <a href="#">전자공시(DART)</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <p>회사소개</p>
+                    <ul>
+                        <li>
+                            <a href="#">인사말</a>
+                        </li>
+                        <li>
+                            <a href="#">연혁</a>
+                        </li>
+                        <li>
+                            <a href="#">사업현황</a>
+                        </li>
+                        <li>
+                            <a href="#">임원진소개</a>
+                        </li>
+                        <li>
+                            <a href="#">오시는길</a>
+                        </li>
+                        <li>
+                            <a href="#">Contact</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <p>인재영입</p>
+                    <ul>
+                        <li>
+                            <a href="#">영입안내</a>
+                        </li>
+                        <li>
+                            <a href="#">복리후생</a>
+                        </li>
+                        <li>
+                            <a href="#">영입공고</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </header>
+    <!-- //header -->
+    <div class="container">
+    <section id="section01" data-0="display:block;" data-1000="display:none;">
+        <div class="sec01" data-0="transform: scale(1); display:block;" data-550="transform: scale(0.63);"
+            data-1000="display:none;">
+            <div class="first-title">
+                <h2>
+                    <strong>
+                    Welcome to 
+                </strong>
+                <img src="img/main-logotxt.png" alt="logo">
+            </h2>
+                <span>티엘아이 웹사이트에 오신 여러분 환영합니다</span>
+                <button type="button">
+                    click here!
+                    <span>
+
+                    </span>
+                </button>
+            </div>
+            <div class="title">
+                <h1>
+                    <span>innovative display</span>
+                    <span>powerhouse</span>
+                </h1>
+            </div>
+        </div>
+        <div class="ani_bg" data-0="transform: scale(3); display:none;" data-300="display:block;" data-550="transform: scale(1);"
+            data-1000="display:none;"></div>
+    </section>
+    <!-- //section01 -->
+    <section id="section02">
+        <div class="sec02">
+            <div class="text_ani">
+                <h2 data-0="transform: translate(1250%,100%) scale(300); opacity:0;"
+                    data-1000="transform: translate(1250%,100%) scale(300); opacity:0;" data-1100="opacity:1;"
+                    data-2000="transform: translate(-50%,-50%) scale(1); opacity:1;" data-2150="opacity:1;"
+                    data-2160="opacity:0;">Why TLi?</h2>
+            </div>
+        </div>
+    </section>
+    <!-- //section03 -->
+    <section id="section03">
+        <div class="sec03">
+            <div class="desc">
+                <h1 data-1700="opacity:0;" data-2150="opacity:0;" data-2160="opacity:1;">Why TLi?</h1>
+                <span>티엘아이를 선택해야하는 이유</span>
+            </div>
+            <div class="slide slide02">
+                <div class="item swiper-container">
+                    <ul class="swiper-wrapper">
+                        <li class="swiper-slide"><img src="img/img_main_slide01.png" alt="슬라이드1"></li>
+                        <li class="swiper-slide"><img src="img/img_main_slide02.png" alt="슬라이드2"></li>
+                        <li class="swiper-slide"><img src="img/img_main_slide03.png" alt="슬라이드3"></li>
+                    </ul>
+                    <div class="swiper-next"></div>
+                    <div class="swiper-prev"></div>
+                </div>
+                <div class="slide_text">
+                    <ul class="text act02">
+                        <li class="txt01"><strong>국내최초 Micro LED DRiver IC 상용화</strong>
+                            <p>˙고해상도/고화질 LED 디스플레이 구현 가능 <br>˙최대 120채널/80스캔 지원가능 <br>˙자체 PWM Technology</p>
+                        </li>
+                        <li class="txt02 on"><strong>앞선 기술력</strong>
+                            <p>˙다수 특허 보유 <br>˙80% 이상의 연구인력 비중</p>
+                        </li>
+                        <li class="txt03"><strong>다년간 축적된 Display 시장 경험</strong>
+                            <p>˙20년간 글로벌 기업과의 협업 Knowhow <br>˙과감한 R&D 투자</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="section04">
+        <div class="sec04">
+            <h1>micro led driver ic display</h1>
+            <div class="sec04-img">
+                <div class="sec04-bg01"></div>
+                <div class="sec04-bg02"></div>
+                <div class="sec04-bg03"></div>
+                <div class="sec04-bg04"></div>
+            </div>
+            <ul>
+                <li class="cont box01"><a href="#">
+                        <h2>Micro LED driver IC</h2>
+                        <span>Micro LED Display의 신흥강자</span>
+                        <strong>M</strong>
+                        <button type="button">
+                            <strong>MORE VIEW</strong>
+                            <span></span>
+                        </button>
+                    </a>
+                </li>
+                <li class="cont box02"><a href="#">
+                        <h2>DDI</h2>
+                        <span>T-Con에서 받은 디지털 신호를 아날로그 신호로 구동 기능 제공<br>
+                            다년간 성공적이 Driver IC개발 이력
+                        </span>
+                        <strong>D</strong>
+                        <button type="button">
+                            <strong>MORE VIEW</strong>
+                            <span></span>
+                        </button>
+                    </a></li>
+                <li class="cont box03"><a href="#">
+                        <h2>T-Con</h2>
+                        <span>OLED/LCD에 특화된 보상 기능 제공<br>
+                            (TV,Monitor,Automotive)</span>
+                        <strong>T</strong>
+                        <button type="button">
+                            <strong>MORE VIEW</strong>
+                            <span></span>
+                        </button>
+                    </a></li>
+                <li class="cont box04"><a href="#">
+                        <h2>Local Dimming</h2>
+                        <span>H/W 특성부터 S/W 알고리즘까지 모든 솔루션 확보<br>
+                            500-130K zone 솔루션 확보</span>
+                        <strong>L</strong>
+                        <button type="button">
+                            <strong>MORE VIEW</strong>
+                            <span></span>
+                        </button>
+                    </a></li>
+            </ul>
+        </div>
+    </section>
+    <section id="section05">
+        <div class="sec05">
+            <div class="left-box">
+                <img src="img/img_main_sec05.jpg" alt="">
+            </div>
+            <div class="right-box">
+                <h2>Contact us</h2>
+                <p>Display IC 20년 이상의 풍부한 설계경험과 IC설계를 위한<br>
+                    One stop 서비스 제공으로 Flat Panel Display에 대한 깊은 이해와 안목을<br>
+                    갖춘 티엘아이가 함께하겠습니다.</p>
+                    <a href="">
+                        <strong>
+                            MORE VIEW
+                        </strong>
+                        <span></span>
+                    </a>
+                    <ul>
+                        <li>
+                            <a href="#">
+                                <span>
+                                    <img src="img/icon_main05_01.png" alt="">
+                                </span>
+                                공시정보
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span>
+                                    <img src="img/icon_main05_02.png" alt="">
+                                </span>
+                                뉴스
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span>
+                                    <img src="img/icon_main05_03.png" alt="">
+                                </span>
+                                영입안내
+                            </a>
+                        </li>
+                    </ul>
+            </div>
+        </div>
+    </section>
+    <section id="footer">
+        <div class="footer-top">
+            <div class="footer-txt">
+                <h2>
+                    <a href="">
+                        <img src="img/logo.png" alt="">
+                    </a>
+                </h2>
+                <div class="address">
+                    <p>경기도 성남시 종원구 양현로 405번길 12 티엘아이 빌딩</p>
+                </div>
+                <div class="tel">
+                    <p>TEL 031-784-6800</p>
+                    <p>FAX 031-784-6809</p>
+                </div>
+            </div>
+            <div class="footer-infor">
+                <ul>
+                    <li>
+                        <a href="#">
+                            제품소개
+                        </a>
+                        <ul>
+                            <li>
+                                <a href="#">
+                                    Micro LED Driver IC
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    Local Dimming
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    T-con
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DDI
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="">
+                            핵심기술
+                        </a>
+                        <ul>
+                            <li>
+                                <a href="#">
+                                    R&D
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    품질관리
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    특허현황
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="">
+                            투자정보
+                        </a>
+                        <ul>
+                            <li>
+                                <a href="#">
+                                    뉴스
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    재무정보
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    사업보고서
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    결산공고
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    전자공시(DART)
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="">
+                            회사소개
+                        </a>
+                        <ul>
+                            <li>
+                                <a href="">
+                                    인사말
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    연혁
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    사업현황
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    임원진소개
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    오시는길
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    Contact
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="">
+                            인재채용
+                        </a>
+                        <ul>
+                            <li>
+                                <a href="#">
+                                    영입안내
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    복리후생
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    영입공고
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bototm">
+            <div class="area">
+                <p>
+                    <a href="">개인정보처리방침</a>
+                    <a href="">이메일 무단수집 거부</a>
+                 </p>
+                 <p class="copy">Copyright(c) 2021 TLi Inc All Right Reserved</p>
+            </div>
+        </div>
+    </section>
+</div>
+    <!-- //section04 -->
+    <script src="js/skrollr.js"></script>
+    <script src="js/skrollr.min.js"></script>
+    <!-- <script src="https://unpkg.com/swiper/swiper-bundle.js"></script> -->
+    <!-- <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script> -->
+    <script src="js/swiper.min.js"></script>
+    <script src="js/jquery.nicescroll.js"></script>
+    <script src="js/jquery.nicescroll.min.js"></script>
+    <script src="js/main.js"></script>
+
+    <script>
+        $('body').on('mousewheel', function (e) {
+            var wheel = e.originalEvent.wheelDelta;
+            if (wheel > 0 || wheel < 0) {
+                // $('body').addClass('hide');
+                $('.sec01').addClass('on');
+            }
+            setTimeout(function () {
+                $('body').addClass('hide');
+            }, 1000);
+        });
+        var s = skrollr.init({
+            edgeStrategy: 'set',
+            smoothScrolling: true,
+            forceHeight: false
+            // easing: {
+            //     WTF: Math.random,
+            //     inverted: function (p) {
+            //         return 1 - p;
+            //     }
+            // }           
+        });
+        var mySwiper = new Swiper('.swiper-container', {
+            loop: true,
+            slidesPerView: "auto",
+            initialSlide: 1,
+            centeredSlides: true,
+            effect: "coverflow",
+            coverflowEffect: {
+                rotate: 70,
+                stretch: 100,
+                depth: 320,
+                modifier: 1,
+                slideShadows: true,
+            },
+            pagination: { // 페이징 설정
+                el: '.swiper-pagination', // 페이징을 클릭하면 해당 영역으로 이동, 필요시 지정해 줘야 기능 작동
+            },
+            navigation: { // 네비게이션 설정
+                nextEl: '.swiper-next', // 다음 버튼 클래스명
+                prevEl: '.swiper-prev', // 이번 버튼 클래스명
+            },
+        });
+
+
+        mySwiper.on('slideChange', function () {
+            var real = mySwiper.realIndex;
+            $('.slide').removeClass('slide01 slide02 slide03');
+            $('.slide').addClass('slide0' + (real + 1));
+            $('.slide_text > ul.text').removeClass('act01 act02 act03');
+            $('.slide_text > ul.text').addClass('act0' + (real + 1));
+            $('.slide_text > ul > li').removeClass('on');
+            $('.slide_text > ul > li').eq(real).addClass('on');
+        });
+
+    </script>
+    <!-- //script -->
+</body>
+
+</html>
