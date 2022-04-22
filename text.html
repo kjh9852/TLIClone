@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TLI Clone Coding</title>
+
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/swiper.css">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" /> -->
+
+    <!-- CSS -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
+        rel="stylesheet">
+    <!-- 웹 폰트 -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <!-- JS -->
+</head>
+
+<body class="before-load">
+    <section id="section04">
+        <div class="sec04">
+            <h1>micro led driver ic display</h1>
+            <div class="sec04-img">
+                <div class="sec04-bg01"></div>
+                <div class="sec04-bg02"></div>
+                <div class="sec04-bg03"></div>
+                <div class="sec04-bg04"></div>
+            </div>
+            <div class="mobile_view">
+                <div class="sec04_swiper swiper-container">
+                    <ul class="swiper-wrapper">
+                        <li class="swiper-slide bg01">
+                            <a href="#">
+                                <div class="txt_box">
+                                    <div>
+                                        <strong>M</strong>
+                                        <h2>Micro LED driver IC</h2>
+                                        <span>Micro LED Display의 신흥강자</span>
+                                    </div>
+                                    <button type="button">
+                                        <strong>MORE VIEW</strong>
+                                        <span></span>
+                                    </button>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="swiper-slide bg02">
+                            <a href="#">
+                                <div class="txt_box">
+                                    <div>
+                                        <strong>D</strong>
+                                        <h2>DDI</h2>
+                                        <span>T-Con에서 받은 디지털 신호를 아날로그 신호로 구동 기능 제공<br>
+                                            다년간 성공적이 Driver IC개발 이력
+                                        </span>
+                                    </div>
+                                    <button type="button">
+                                        <strong>MORE VIEW</strong>
+                                        <span></span>
+                                    </button>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- //section04 -->
+    <script src="js/skrollr.js"></script>
+    <script src="js/skrollr.min.js"></script>
+    <!-- <script src="https://unpkg.com/swiper/swiper-bundle.js"></script> -->
+    <!-- <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script> -->
+    <script src="js/swiper.min.js"></script>
+    <script src="js/jquery.nicescroll.js"></script>
+    <script src="js/jquery.nicescroll.min.js"></script>
+    <script src="js/main.js"></script>
+
+    <script>
+        $('body').on('mousewheel', function (e) {
+            var wheel = e.originalEvent.wheelDelta;
+            if (wheel > 0 || wheel < 0) {
+                // $('body').addClass('hide');
+                $('.sec01').addClass('on');
+            }
+            setTimeout(function () {
+                $('body').addClass('hide');
+            }, 1000);
+        });
+        var s = skrollr.init({
+            edgeStrategy: 'set',
+            smoothScrolling: true,
+            forceHeight: false
+            // easing: {
+            //     WTF: Math.random,
+            //     inverted: function (p) {
+            //         return 1 - p;
+            //     }
+            // }           
+        });
+
+        var swiper02 = new Swiper('.sec04_swiper', {
+            // autoplay: {
+            //     delay: 4000,
+            // },
+            speed: 300,
+            loop: true,
+            pagination: { // 페이징 설정
+                el: '.swiper-pagination',
+                clickable: true, // 페이징을 클릭하면 해당 영역으로 이동, 필요시 지정해 줘야 기능 작동
+            },
+            on : {
+                init: function(){
+                    $('.sec04-bg01').addClass('on');
+                }
+            }
+        });
+
+        var mySwiper = new Swiper('.item', {
+            loop: true,
+            slidesPerView: "auto",
+            initialSlide: 1,
+            centeredSlides: true,
+            effect: "coverflow",
+            coverflowEffect: {
+                rotate: 70,
+                stretch: 100,
+                depth: 320,
+                modifier: 1,
+                slideShadows: true,
+            },
+
+            navigation: { // 네비게이션 설정
+                nextEl: '.swiper-next', // 다음 버튼 클래스명
+                prevEl: '.swiper-prev', // 이번 버튼 클래스명
+            },
+        });
+
+
+        mySwiper.on('slideChange', function () {
+            var real = mySwiper.realIndex;
+            $('.slide').removeClass('slide01 slide02 slide03');
+            $('.slide').addClass('slide0' + (real + 1));
+            $('.slide_text > ul.text').removeClass('act01 act02 act03');
+            $('.slide_text > ul.text').addClass('act0' + (real + 1));
+            $('.slide_text > ul > li').removeClass('on');
+            $('.slide_text > ul > li').eq(real).addClass('on');
+        });
+
+        swiper02.on('slideChange', function() {
+            var real = swiper02.realIndex + 1;
+            $('.sec04-img').find('div').removeClass('on');
+            $('.sec04-bg0'+(real)).addClass('on');
+        });
+
+    </script>
+    <!-- //script -->
+</body>
+
+</html>

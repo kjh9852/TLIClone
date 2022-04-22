@@ -10,12 +10,14 @@
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/swiper.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animation.css">
     <!-- <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" /> -->
 
     <!-- CSS -->
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
         rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Catamaran:wght@100;200;300;400;500;600;700;800;900&family=Marcellus&family=Noto+Sans+KR:wght@300&display=swap" rel="stylesheet">
     <!-- 웹 폰트 -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
@@ -58,7 +60,7 @@
             </div>
         </nav>
         <div class="sub-iframe">
-            <iframe id="html-iframe" src="http://127.0.0.1:5500/TLi/index.html"></iframe>
+            <iframe id="html-iframe" src=http://127.0.0.1:5500/TLIClone/index.html></iframe>
         </div>
         <div class="sub-menu">
             <ul>
@@ -158,6 +160,8 @@
     <section id="section01" data-0="display:block;" data-1000="display:none;">
         <div class="sec01" data-0="transform: scale(1); display:block;" data-550="transform: scale(0.63);"
             data-1000="display:none;">
+            <div class="main_circle"></div>
+            <div class="main_bg"></div>
             <div class="first-title">
                 <h2>
                     <strong>
@@ -174,14 +178,26 @@
                 </button>
             </div>
             <div class="title">
-                <h1>
-                    <span>innovative display</span>
-                    <span>powerhouse</span>
-                </h1>
+                <div class="pc_view">
+                    <h1>
+                        <span>innovative display</span>
+                        <span>powerhouse</span>
+                    </h1>
+                </div>
+                <div class="mobile_view">
+                    <h1>
+                        <span>innovative</span>
+                        <span>display</span>
+                        <span>powerhouse</span>
+                    </h1>
+                </div>
             </div>
         </div>
+        <div class="scroll_ani">
+            <p>SCROLL TO EXPLORE</p>
+        </div>
         <div class="ani_bg" data-0="transform: scale(3); display:none;" data-300="display:block;" data-550="transform: scale(1);"
-            data-1000="display:none;"></div>
+            data-1000="display:block;"></div>
     </section>
     <!-- //section01 -->
     <section id="section02">
@@ -199,7 +215,7 @@
         <div class="sec03">
             <div class="desc">
                 <h1 data-1700="opacity:0;" data-2150="opacity:0;" data-2160="opacity:1;">Why TLi?</h1>
-                <span>티엘아이를 선택해야하는 이유</span>
+                <span>티엘아이를 선택해야 하는 이유</span>
             </div>
             <div class="slide slide02">
                 <div class="item swiper-container">
@@ -229,6 +245,9 @@
     </section>
     <section id="section04">
         <div class="sec04">
+            <div class="scroll_ani">
+                <p>SCROLL TO EXPLORE</p>
+            </div>
             <h1>micro led driver ic display</h1>
             <div class="sec04-img">
                 <div class="sec04-bg01"></div>
@@ -236,7 +255,7 @@
                 <div class="sec04-bg03"></div>
                 <div class="sec04-bg04"></div>
             </div>
-            <ul>
+            <ul class="pc_view">
                 <li class="cont box01"><a href="#">
                         <h2>Micro LED driver IC</h2>
                         <span>Micro LED Display의 신흥강자</span>
@@ -279,6 +298,77 @@
                         </button>
                     </a></li>
             </ul>
+            <div class="mobile_view">
+                <div class="sec04_swiper swiper-container">
+                    <ul class="swiper-wrapper">
+                        <li class="swiper-slide bg01">
+                            <a href="#">
+                                <div class="txt_box">
+                                    <div>
+                                        <strong>M</strong>
+                                        <h2>Micro LED driver IC</h2>
+                                        <span>Micro LED Display의 신흥강자</span>
+                                    </div>
+                                    <button type="button">
+                                        <strong>MORE VIEW</strong>
+                                        <span></span>
+                                    </button>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="swiper-slide bg02">
+                            <a href="#">
+                                <div class="txt_box">
+                                    <div>
+                                        <strong>D</strong>
+                                        <h2>DDI</h2>
+                                        <span>T-Con에서 받은 디지털 신호를 아날로그 신호로 구동 기능 제공<br>
+                                            다년간 성공적이 Driver IC개발 이력
+                                        </span>
+                                    </div>
+                                    <button type="button">
+                                        <strong>MORE VIEW</strong>
+                                        <span></span>
+                                    </button>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="swiper-slide bg03">
+                            <a href="#">
+                                <div class="txt_box">
+                                    <div>
+                                        <strong>T</strong>
+                                        <h2>T-Con</h2>
+                                        <span>OLED/LCD에 특화된 보상 기능 제공<br>
+                                            (TV,Monitor,Automotive)</span>
+                                    </div>
+                                    <button type="button">
+                                        <strong>MORE VIEW</strong>
+                                        <span></span>
+                                    </button>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="swiper-slide bg04">
+                            <a href="#">
+                                <div class="txt_box">
+                                    <div>
+                                        <strong>L</strong>
+                                        <h2>Local Dimming</h2>
+                                        <span>H/W 특성부터 S/W 알고리즘까지 모든 솔루션 확보<br>
+                                            500-130K zone 솔루션 확보</span>
+                                    </div>
+                                    <button type="button">
+                                        <strong>MORE VIEW</strong>
+                                        <span></span>
+                                    </button>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
         </div>
     </section>
     <section id="section05">
@@ -334,6 +424,12 @@
                         <img src="img/logo.png" alt="">
                     </a>
                 </h2>
+                <div class="area">
+                    <p>
+                        <a href="">개인정보처리방침</a>
+                        <a href="">이메일 무단수집 거부</a>
+                    </p>
+                </div>
                 <div class="address">
                     <p>경기도 성남시 종원구 양현로 405번길 12 티엘아이 빌딩</p>
                 </div>
@@ -488,12 +584,19 @@
             </div>
         </div>
         <div class="footer-bototm">
-            <div class="area">
-                <p>
-                    <a href="">개인정보처리방침</a>
-                    <a href="">이메일 무단수집 거부</a>
-                 </p>
-                 <p class="copy">Copyright(c) 2021 TLi Inc All Right Reserved</p>
+            <div class="pc_view">
+                <div class="area">
+                    <p>
+                        <a href="">개인정보처리방침</a>
+                        <a href="">이메일 무단수집 거부</a>
+                    </p>
+                    <p class="copy">Copyright(c) 2021 TLi Inc All Right Reserved</p>
+                </div>
+            </div>
+            <div class="mobile_view">
+                <div class="area">
+                    <p class="copy">Copyright(c) 2021 TLi Inc All Right Reserved</p>
+                </div>
             </div>
         </div>
     </section>
@@ -530,7 +633,22 @@
             //     }
             // }           
         });
-        var mySwiper = new Swiper('.swiper-container', {
+
+        var swiper02 = new Swiper('.sec04_swiper', {
+            speed: 300,
+            loop: true,
+            pagination: { // 페이징 설정
+                el: '.swiper-pagination',
+                clickable: true, // 페이징을 클릭하면 해당 영역으로 이동, 필요시 지정해 줘야 기능 작동
+            },
+            on : {
+                init: function(){
+                    $('.sec04-bg01').addClass('on');
+                }
+            }
+        });
+
+        var mySwiper = new Swiper('.item', {
             loop: true,
             slidesPerView: "auto",
             initialSlide: 1,
@@ -543,9 +661,7 @@
                 modifier: 1,
                 slideShadows: true,
             },
-            pagination: { // 페이징 설정
-                el: '.swiper-pagination', // 페이징을 클릭하면 해당 영역으로 이동, 필요시 지정해 줘야 기능 작동
-            },
+
             navigation: { // 네비게이션 설정
                 nextEl: '.swiper-next', // 다음 버튼 클래스명
                 prevEl: '.swiper-prev', // 이번 버튼 클래스명
@@ -561,6 +677,12 @@
             $('.slide_text > ul.text').addClass('act0' + (real + 1));
             $('.slide_text > ul > li').removeClass('on');
             $('.slide_text > ul > li').eq(real).addClass('on');
+        });
+
+        swiper02.on('slideChange', function() {
+            var real = swiper02.realIndex + 1;
+            $('.sec04-img').find('div').removeClass('on');
+            $('.sec04-bg0'+(real)).addClass('on');
         });
 
     </script>

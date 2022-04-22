@@ -56,7 +56,7 @@ $(window).scroll(function () {
     let section05 = $('#section05');
     let section05top = section05.offset().top;
 
-    console.log(section05top, navTop);
+    const headerBg = document.querySelector('header');
 
     if(wScroll >= section05top - 500) {
        $('.sec05').addClass('on');
@@ -64,12 +64,15 @@ $(window).scroll(function () {
         $('.sec05').removeClass('on');
 
     }
-
     if (wScroll >= section05top) {
-        // console.log('크다');
         $('#footer').addClass('fixed');
     } else {
         $('#footer').removeClass('fixed');
+    }
+    if (wScroll >= 100) {
+        headerBg.classList.add('active');
+    }else {
+        headerBg.classList.remove('active');
     }
 });
 
@@ -88,7 +91,6 @@ function nav() {
     var winTop = $(window).scrollTop(),
         htmlH = $("html").height() - $(window).height() - $("#footer").height(),
         winW = $(window).width();
-    console.log(htmlH, winTop);
 
     if (winTop > htmlH && winW > 1024) {
         $(".nav").css("margin-top", "-" + (winTop - htmlH) + "px");
@@ -97,7 +99,9 @@ function nav() {
 
     }
 };
-
+    window.addEventListener('resize', () => {
+        window.location.reload();
+    });
 $(".nav > .top > a").click(function (e) {
     console.log('클릭');
     e.preventDefault();
