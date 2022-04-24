@@ -110,6 +110,10 @@
         $(window).scroll(function () {
             nav();
         })
+        $('html,body').animate({
+            scrollTop:0 
+        });
+        mainScroll();
     });
 
     function nav() {
@@ -144,7 +148,4 @@
         header.remove();
     });
 
-    window.addEventListener('load', () => {
-        mainScroll();
-    });
 })();
