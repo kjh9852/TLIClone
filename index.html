@@ -618,20 +618,26 @@
                 // $('body').addClass('hide');
                 $('.sec01').addClass('on');
             }
-            setTimeout(function () {
-                $('body').addClass('hide');
-            }, 1000);
+            // setTimeout(function () {
+            //     $('body').addClass('hide');
+            // }, 1000);
         });
         var s = skrollr.init({
             edgeStrategy: 'set',
             smoothScrolling: true,
-            forceHeight: false
+            forceHeight: false,
             // easing: {
             //     WTF: Math.random,
             //     inverted: function (p) {
             //         return 1 - p;
             //     }
-            // }           
+            // }     
+            forceHeight: false,
+            mobileCheck: function () {
+                if ((/Android|iPhone|iPad|iPod|BlackBerry|Windows Phone/i).test(navigator.userAgent || navigator.vendor || window.opera)) {
+                    // mobile device
+                }
+            }      
         });
 
         var swiper02 = new Swiper('.sec04_swiper', {

@@ -1,6 +1,6 @@
 @charset "utf-8";
 html {}
-body {height: 100%; overflow-x: hidden; overflow-y: hidden; background: #131313;} 
+body {height: 100%; background: #131313;} 
 body.sub .container {opacity: 0; transition: .3s;}
 .before-load .loading{
     opacity: 1;
@@ -15,10 +15,6 @@ body.sub .container {opacity: 0; transition: .3s;}
     opacity: 0;
     z-index: 100;
     transition: .3s;
-}
-.hide {
-    overflow: scroll;
-    -ms-overflow-style: none;
 }
 
 .hide::-webkit-scrollbar { 
