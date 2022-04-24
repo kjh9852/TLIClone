@@ -611,16 +611,6 @@
     <script src="js/main.js"></script>
 
     <script>
-        $('body').on("touchmove",function(e){
-            YOffset = window.pageYOffset;
-            if (YOffset > 0 || YOffset < 0) {
-                // $('body').addClass('hide');
-                $('.sec01').addClass('on');
-            }
-            setTimeout(function () {
-                $('html').addClass('scroll');
-            }, 1000);
-        });
         var s = skrollr.init({    
             forceHeight: false,
             mobileCheck: function () {

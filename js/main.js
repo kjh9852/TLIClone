@@ -3,6 +3,26 @@ $(window).scroll(function (e) {
     $(".scroll_color").text(wScroll);
 });
 
+function mainScroll() {
+    $('body').on("mousewheel",function(e){
+        var wheel = e.originalEvent.wheelDelta;
+        if (wheel > 0 || wheel < 0) {
+            // $('body').addClass('hide');
+            $('.sec01').addClass('on');
+        }
+        setTimeout(function () {
+            $('html').addClass('scroll');
+        }, 1000);
+    });
+    if ((/Android|iPhone|iPad|iPod|BlackBerry|Windows Phone/i).test(navigator.userAgent || navigator.vendor || window.opera)) {
+        // mobile device
+        $('body').on("touchmove",function(e){
+            setTimeout(function () {
+                $('html').addClass('scroll');
+            }, 1000);
+        });
+    }
+}
 $(function () {
     let cont01 = $('.box01');
     let cont02 = $('.box02');
