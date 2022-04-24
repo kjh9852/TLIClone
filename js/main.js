@@ -125,9 +125,6 @@
 
         }
     };
-    window.addEventListener('resize', () => {
-        window.location.reload();
-    });
     $(".nav > .top > a").click(function (e) {
         console.log('클릭');
         e.preventDefault();
