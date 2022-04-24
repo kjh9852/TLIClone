@@ -1,6 +1,6 @@
 $(window).scroll(function (e) {
     const wScroll = $(this).scrollTop();
-    $(".scroll").text(wScroll);
+    $(".scroll_color").text(wScroll);
 });
 
 $(function () {

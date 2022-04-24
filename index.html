@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<html lang="ko">
-
+<html lang="ko" class="main">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -612,26 +611,17 @@
     <script src="js/main.js"></script>
 
     <script>
-        $('body').on('mousewheel', function (e) {
-            var wheel = e.originalEvent.wheelDelta;
-            if (wheel > 0 || wheel < 0) {
+        $('body').on("touchmove",function(e){
+            YOffset = window.pageYOffset;
+            if (YOffset > 0 || YOffset < 0) {
                 // $('body').addClass('hide');
                 $('.sec01').addClass('on');
             }
-            // setTimeout(function () {
-            //     $('body').addClass('hide');
-            // }, 1000);
+            setTimeout(function () {
+                $('html').addClass('scroll');
+            }, 1000);
         });
-        var s = skrollr.init({
-            edgeStrategy: 'set',
-            smoothScrolling: true,
-            forceHeight: false,
-            // easing: {
-            //     WTF: Math.random,
-            //     inverted: function (p) {
-            //         return 1 - p;
-            //     }
-            // }     
+        var s = skrollr.init({    
             forceHeight: false,
             mobileCheck: function () {
                 if ((/Android|iPhone|iPad|iPod|BlackBerry|Windows Phone/i).test(navigator.userAgent || navigator.vendor || window.opera)) {

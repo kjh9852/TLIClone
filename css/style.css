@@ -1,9 +1,16 @@
 @charset "utf-8";
 html {}
-body {height: 100%; background: #131313;} 
+body {background: #131313;} 
 body.sub .container {opacity: 0; transition: .3s;}
 .before-load .loading{
     opacity: 1;
+}
+.main {
+    overflow-y: hidden;
+}
+.main.scroll {
+    overflow-y: auto;
+    overflow-x: hidden;
 }
 .loading {
     position: fixed;
@@ -16,12 +23,6 @@ body.sub .container {opacity: 0; transition: .3s;}
     z-index: 100;
     transition: .3s;
 }
-
-.hide::-webkit-scrollbar { 
-    display: none;
-    width: 0 !important;
-}
-
 .container {position: relative; overflow: hidden; background: #000; z-index: 5;}
 header {position: relative; z-index: 50;}
 #section01 {position: fixed; width: 100%; height: 100%; z-index: 6;}
@@ -34,7 +35,7 @@ header {position: relative; z-index: 50;}
 #footer::before {position: absolute; content:''; top: 160px; left: 0; width: 100%; height: 100%; background: #272727; z-index: 0;}
 #footer.fixed {opacity: 1;;}
 
-.scroll {color: #fff;}
+.scroll_color {color: #fff;}
 .logo {position: fixed; float: left; margin: 5em 0 0 4em;}
 .logo a {}
 .logo a img {width: 50%;}
@@ -852,6 +853,10 @@ header {position: relative; z-index: 50;}
     }
 }
 @media (max-width: 1024px) {
+    .main {
+        overflow-y: hidden;
+        height: 100%;
+    }
     header {
         position: fixed;
         width: 100%;
