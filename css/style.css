@@ -1,5 +1,5 @@
 @charset "utf-8";
-html {}
+html {overflow: hidden;}
 body {background: #131313;} 
 body.sub .container {opacity: 0; transition: .3s;}
 .before-load .loading{
