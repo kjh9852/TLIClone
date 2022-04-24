@@ -915,6 +915,7 @@ header {position: relative; z-index: 50;}
     #footer {
         position: relative;
         height: auto;
+        z-index: 3;
     }
     .footer-top {
         left: 0;
