@@ -10,7 +10,7 @@
             setTimeout(function () {
                 $('html').addClass('scroll');
                 $("body").niceScroll();
-            }, 1000);
+            }, 500);
         });
         if ((/Android|iPhone|iPad|iPod|BlackBerry|Windows Phone/i).test(navigator.userAgent || navigator.vendor || window.opera)) {
             // mobile device
@@ -21,7 +21,7 @@
                 }
                 setTimeout(function () {
                     $('html').addClass('scroll');
-                }, 1000);
+                }, 500);
             });
         }
     }
