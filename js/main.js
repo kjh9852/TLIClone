@@ -28,7 +28,6 @@
             }
         }
     }
-
     $(function () {
         let cont01 = $('.box01');
         let cont02 = $('.box02');
