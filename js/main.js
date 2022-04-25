@@ -12,7 +12,7 @@
         });
         $('.first-title > button').on('click',function(){
             $('.sec01').addClass('on');
-            scrollStart()
+            scrollStart();
         });
         function scrollStart() {
             setTimeout(function () {
@@ -28,7 +28,7 @@
             }
         }
     }
-    
+
     $(function () {
         let cont01 = $('.box01');
         let cont02 = $('.box02');
