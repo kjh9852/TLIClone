@@ -1,28 +1,27 @@
 (() => {
     function mainScroll() {
-        $('body').stop().on("mousewheel", function (e) {
-            var wheel = e.originalEvent.wheelDelta;
-            if (wheel > 0 || wheel < 0) {
+        $('body').stop().on("touchmove mousewheel wheel", function (e) {
+            var chk = $('#section01').attr("data-stop");
+            if(chk == "0") {
+                $('#section01').attr("data-stop","1");
                 $('.sec01').addClass('on');
-                $('html').css('overflow-y','hidden');
+                setTimeout(function(){
+                    scrollStart()
+                },500);
             }
+        });
+        function scrollStart() {
             setTimeout(function () {
                 $('html').addClass('scroll');
-                $("body").niceScroll();
-            }, 500);
-        });
-        var mobile = (/Android|iPhone|iPad|iPod|BlackBerry|Windows Phone/i).test(navigator.userAgent || navigator.vendor || window.opera)
-        if (mobile) {
-            // mobile device
-            $('body').stop().on("touchmove", function (e) {
-                YOffset = window.pageYOffset;
-                if (YOffset > 0 || YOffset < 0) {
-                    $('.sec01').addClass('on');
-                }
-                setTimeout(function () {
-                    $('html').addClass('scroll');
-                }, 500);
-            });
+            }, 1000);
+            var mobile = (/Android|iPhone|iPad|iPod|BlackBerry|Windows Phone/i).test(navigator.userAgent || navigator.vendor || window.opera);
+            if(!mobile) {
+                $("html").niceScroll({
+                    horizrailenabled:false,
+                    scrollspeed: 70,
+                    mousescrollstep:70,
+                });
+            }
         }
     }
     $(function () {
@@ -111,6 +110,14 @@
             scrollTop:0 
         });
         mainScroll();
+        skrollr.init({    
+            forceHeight: false,
+            mobileCheck: function () {
+                if ((/Android|iPhone|iPad|iPod|BlackBerry|Windows Phone/i).test(navigator.userAgent || navigator.vendor || window.opera)) {
+                    // mobile device
+                }
+            }      
+        });
     });
 
     function nav() {
