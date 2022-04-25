@@ -29,7 +29,8 @@
         <div class="logo">
             <a href="#">
                 <img src="img/logo.png" alt="logo">
-            </a>`
+            </a>
+            <div class="scroll_bar">0</div>
         </div>
         <nav class="nav">
             <div class="top">
@@ -198,7 +199,7 @@
             data-1000="display:block;"></div>
     </section>
     <!-- //section01 -->
-    <section id="section02" data-990="@add:on" add="off">
+    <section id="section02" data-850="@add:off" data-920="@add:on" add="off">
         <div class="sec02">
             <div class="text_ani">
                 <h2 data-0="transform: translate(1250%,100%) scale(300); opacity:0; "
@@ -610,6 +611,15 @@
     <script src="js/main.js"></script>
 
     <script>
+
+        skrollr.init({    
+            forceHeight: false,
+            mobileCheck: function () {
+                if ((/Android|iPhone|iPad|iPod|BlackBerry|Windows Phone/i).test(navigator.userAgent || navigator.vendor || window.opera)) {
+                    // mobile device
+                }
+            }      
+        });
         var swiper02 = new Swiper('.sec04_swiper', {
             speed: 300,
             loop: true,

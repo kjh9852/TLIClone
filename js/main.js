@@ -1,6 +1,6 @@
 (() => {
     function mainScroll() {
-        $('body').stop().on("touchmove mousewheel wheel", function (e) {
+        $('#section01').stop().on("touchmove mousewheel wheel", function (e) {
             var chk = $('#section01').attr("data-stop");
             if(chk == "0") {
                 $('#section01').attr("data-stop","1");
@@ -9,6 +9,10 @@
                     scrollStart()
                 },500);
             }
+        });
+        $('.first-title > button').on('click',function(){
+            $('.sec01').addClass('on');
+            scrollStart()
         });
         function scrollStart() {
             setTimeout(function () {
@@ -105,19 +109,13 @@
         nav();
         $(window).scroll(function () {
             nav();
+            const wScroll = $(this).scrollTop();
+            $(".scroll_bar").text(wScroll);
         })
         $('html,body').animate({
             scrollTop:0 
         });
         mainScroll();
-        skrollr.init({    
-            forceHeight: false,
-            mobileCheck: function () {
-                if ((/Android|iPhone|iPad|iPod|BlackBerry|Windows Phone/i).test(navigator.userAgent || navigator.vendor || window.opera)) {
-                    // mobile device
-                }
-            }      
-        });
     });
 
     function nav() {
