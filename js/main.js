@@ -14,7 +14,7 @@
         });
         if ((/Android|iPhone|iPad|iPod|BlackBerry|Windows Phone/i).test(navigator.userAgent || navigator.vendor || window.opera)) {
             // mobile device
-            $('body').stop().on("touchstart", function (e) {
+            $('body').stop().on("touchmove", function (e) {
                 YOffset = window.pageYOffset;
                 if (YOffset > 0 || YOffset < 0) {
                     $('.sec01').addClass('on');
