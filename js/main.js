@@ -3,7 +3,6 @@
         $('body').stop().on("mousewheel", function (e) {
             var wheel = e.originalEvent.wheelDelta;
             if (wheel > 0 || wheel < 0) {
-                // $('body').addClass('hide');
                 $('.sec01').addClass('on');
                 $('html').css('overflow-y','hidden');
             }
@@ -12,7 +11,8 @@
                 $("body").niceScroll();
             }, 500);
         });
-        if ((/Android|iPhone|iPad|iPod|BlackBerry|Windows Phone/i).test(navigator.userAgent || navigator.vendor || window.opera)) {
+        var mobile = (/Android|iPhone|iPad|iPod|BlackBerry|Windows Phone/i).test(navigator.userAgent || navigator.vendor || window.opera)
+        if (mobile) {
             // mobile device
             $('body').stop().on("touchmove", function (e) {
                 YOffset = window.pageYOffset;
